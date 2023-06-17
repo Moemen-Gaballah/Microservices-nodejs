@@ -1,3 +1,33 @@
 npx create-react-app client
 
 docker build .
+
+docker run -it stephengrider/posts sh
+
+# Docker General Commands
+1- docker build -t moemen/posts .
+2- docker run [image id or image tag]
+3- docker run -it [image id or image tag][cmd]
+4- docker ps
+5- docker exec -it [container id][cmd]
+6- docker logs [container id]
+
+
+docker build -t moemen/event-bus .
+docker run moemen/event-bus
+
+
+# show k8s versions
+kubectl version
+
+# meaning K8S
+kubernetes cluster  => A collections of nodes + a master to manage them
+
+Node    => A virtual machine that will run out containers
+
+Pod     => More or less running container.,
+Technically, a pod can run multiple containers (we won't do this)
+
+Deployment  => Monitors a set of pods, make sure they are running and restarts them if they crash
+
+Service => Provides an easy to remember URL to access a running container.
