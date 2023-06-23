@@ -89,3 +89,5 @@ kubectl get pods
 kubectl logs [pod_name]
 
 kubectl describe service posts-srv
+
+kubectl get services
