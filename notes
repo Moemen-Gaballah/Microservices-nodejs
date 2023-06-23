@@ -31,3 +31,61 @@ Technically, a pod can run multiple containers (we won't do this)
 Deployment  => Monitors a set of pods, make sure they are running and restarts them if they crash
 
 Service => Provides an easy to remember URL to access a running container.
+
+# run k8s file config => create Pods
+kubectl apply -f posts.yaml
+
+# list Pods
+kubectl get pods
+
+# Delete Pods
+kubectl delete pod NamePods
+
+kubectl exec -it [pods_name][cmd]
+
+kubectl logs [pod_name]
+
+kubectl delete pod [pod_name]
+
+kubectl apply -f [config file name]
+
+kubectl describe pod [pod_name]
+
+kubectl get deployments
+
+
+# Deployment Commands
+kubectl get deployments
+
+kubectl describe deployment [depl name]
+
+kubectl apply -f [config file name]
+
+kubectl delete deployment [depl_name]
+
+docker push moemengaballah/posts
+
+kubectl rollout restart deployment [depl_name]
+
+
+=====================
+
+kubectl apply -f posts-depl.yaml
+
+kubectl get deployments
+
+docker build -t moemengaballah/posts .
+
+docker push moemengaballah/posts
+
+k get deployments
+
+kubectl rollout restart deployment [posts-depl]
+
+kubectl get deployments
+
+kubectl get pods
+
+kubectl logs [pod_name]
+
+kubectl describe service posts-srv
