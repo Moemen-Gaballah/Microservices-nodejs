@@ -91,3 +91,18 @@ kubectl logs [pod_name]
 kubectl describe service posts-srv
 
 kubectl get services
+
+kubectl rollout restart deployment
+
+# https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.0/deploy/static/provider/cloud/deploy.yaml
+
+# solve problem kubectl apply -f ingress-srv.yaml
+#Error error: resource mapping not found for name: "ingress-srv" namespace: "" from "ingress-srv.yaml": no matches for kind "Ingress" in version "networking.k8s.io/v1beta1"
+       ensure CRDs are installed first
+
+https://stackoverflow.com/questions/72224230/error-resource-mapping-not-found-make-sure-crds-are-installed-first
+
+kubectl rollout restart deployment client-depl
+
+kubectl apply -f ingress-srv.yaml
